@@ -1,4 +1,13 @@
-TLDR:
+First thing to do!
+Virtuelle Maschine erstellen:
+python -m venv env
+
+Virtuelle Maschien starten:
+ "./env/Scripts/activate oder ./env/Scripts/activate
+ 
+Requirements runterladen und installieren:
+ pip install -r requirements.txt
+
 Vor Start:
 1.  "./env/Scripts/activate oder ./env/Scripts/activate
 2.  python manage.py runserver
