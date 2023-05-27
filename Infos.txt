@@ -1,0 +1,30 @@
+1. Ihr müsst immer in der Virtuellen Maschine drin sein sobald ihr der Server starten wollt/etwas pip installen wollt
+2. Falls Powershell bei euch als Standard gesetzt ist ändert auf cmd im Terminal Strg+Shift+Ö (funktioniert bei mir einwandfrei)ÖÖ
+3. Nachdem ihr eure Virtuelle Maschine gestartet habt muss es ca. so Aussehen:
+
+(env) C:\****\****\****\Anwendungsprojekt>
+
+Also Entweder steht da (env) oder (venv).
+
+Zum Starten des Servers und öffnen der Website diesen Befehl in Kommandozeile:
+python manage.py runserver
+
+Um die Seite zu öffnen im Browser:
+localhost:8000/*Hier dann in Ulrs reinschauen welchen Link ihr sehen möchtet oder über Hauptseite navigieren*
+127.0.0.1:8000/
+
+
+Stammbaum   = Die App
+models.py   = Hier kommen Klassen rein die mit der Datenbank arbeiten können und das an die html schicken kann (Anzeigen von Einträgen)
+tests.py    = noch nie benutzt wahrscheinlich Irrelevant
+views.py    = so ziemlich das wichtigste neben dem Templates Ordner. Hier wird am meisten Programmiert.
+__init__.py = Irrelevant
+asgi.py     = Irrelevant
+urls.py     = Hier kann man die Urls anlegen damit das Template aufrufbar ist. Benötigt eine Funktion aus views.py die das durch die Funktion "render" ermöglicht
+wsgi.py     = Irrelevant
+manage.py   = Coden gibts da eigentlich nichts? Nimmt aber die Befehle an um Server zu starten etc... Sehr wichtige Datei
+db.sqlite3  = Datenbank SQLITE3 Format
+
+
+__pycache__ in Stammbaum und stammbaum_projekt -> Irrelevant für uns
+migrations -> Ebenfalls Irrelevant am besten nix löschen sonst kaputt
