@@ -36,7 +36,7 @@ nav ul li a {
     color:#444;
 }
 
-nav ul li a:hover {
+nav ul li:hover {
     padding-top: 5px;
 }
 
