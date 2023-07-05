@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="viewchanger.css">
+        <script type="text/javascript" src="searchanimals.js"></script>
     </head>
     <body>
 <!-- header ------------------------------------->
@@ -12,6 +13,13 @@
                     <li><a href="pedigree.html" target="_top">Stammbaum</a></li>
                 </ul>
             </nav>
+            <form>
+                <input list="animals-list" id="animalsearchinput">
+                <datalist id="animals-list">
+                    <option value="keine Einträge">
+                </datalist>
+                <input type="button" value="Suchen" id="submitbutton" onclick="search()">
+            </form>
         </header>
     </body>
 </html>
