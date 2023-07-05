@@ -15,8 +15,12 @@ header {
     position: fixed;
     left: 0;
     top: 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    font-size:medium;
 }
+
+/* navigation **************************/
 
 nav {
     margin: 0px 50px 0 0;
@@ -31,8 +35,7 @@ nav ul li {
     float: left;
     list-style-type: none;
     margin-right: 16px;
-    font-weight: bold;
-    font-size:medium;
+    
 }
 
 
@@ -48,4 +51,30 @@ nav ul li a {
 nav ul li a:hover {
     color:rgb(171, 171, 171);
 }
+
+/* Searchbar ************************/
+form {
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+input {
+    border-radius: 0px;
+    border-width: 1px;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(68, 68, 68);
+    background-color: white;
+    font-weight: bold;
+    height: 20px;
+}
+
+#submitbutton {
+    height: 23.6px;
+}
+
+#submitbutton:hover {
+    color:rgb(171, 171, 171);
+    background-color: gray;
+}
+
 
