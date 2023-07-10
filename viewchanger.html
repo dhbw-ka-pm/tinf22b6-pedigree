@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="viewchanger.css">
         <link rel="stylesheet" type="text/css" href="animalPopup.css">
         <script type="text/javascript" src="searchanimals.js"></script>
@@ -16,7 +17,7 @@
                 </ul>
             </nav>
             <form>
-                <input list="animals-list" id="animalsearchinput">
+                <input list="animals-list" id="animalsearchinput" onload="loadList()">
                 <datalist id="animals-list">
                     <option value="keine Einträge">
                 </datalist>
