@@ -91,11 +91,11 @@ input[type="submit"] {
 input[type="submit2"] {
 	background-color: #000000;
 	color: #fff;
-	padding: 15px 20px;
+	padding: 10px 5px;
 	border: none;
 	border-radius: 50px;
 	cursor: pointer;
-	font-size: 15px;
+	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: 3px;	
 	text-align: center;
