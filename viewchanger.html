@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="viewchanger.css">
         <link rel="stylesheet" type="text/css" href="animalPopup.css">
         <script type="text/javascript" src="searchanimals.js"></script>
     </head>
-    <body>
+    <body onload="loadList()">
 <!-- header ------------------------------------->
         <header>
             <nav>
@@ -18,7 +19,6 @@
             <form>
                 <input list="animals-list" id="animalsearchinput">
                 <datalist id="animals-list">
-                    <option value="keine Einträge">
                 </datalist>
                 <input type="button" value="Suchen" id="submitbutton" onclick="search()">
             </form>
@@ -31,13 +31,13 @@
                     <div class="container">
                         <form>
                             <label>1. Tier</label>
-                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinput" type="text" required="required">
+                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinput1" type="text" required="required">
                             <datalist id="animals-list">
                                 <option value="keine Einträge">
                             </datalist>
                             
                             <label>2. Tier</label>
-                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinput" type="text" required="required">
+                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinput2" type="text" required="required">
                             <datalist id="animals-list">
                                 <option value="keine Einträge">
                             </datalist>
