@@ -87,3 +87,16 @@ input[type="submit"] {
 	text-transform: uppercase;
 	letter-spacing: 3px;	
 }
+
+input[type="submit2"] {
+	background-color: #000000;
+	color: #fff;
+	padding: 15px 20px;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: 3px;	
+	text-align: center;
+}
