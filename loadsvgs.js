@@ -1,5 +1,4 @@
 function loadsvg(){
-    displayResult();
     let list = document.getElementsByTagName("svg");
     for (let l of list){
         let childs = l.children;
@@ -40,6 +39,7 @@ return xhttp.responseXML;
 
 function displayResult()
 {
+  console.log("load xml");
 xml = loadXMLDoc("data.xml");
 xsl = loadXMLDoc("transform.xsl");
 // code for IE

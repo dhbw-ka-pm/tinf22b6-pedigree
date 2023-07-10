@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="animalPopup.css">
         <script type="text/javascript" src="searchanimals.js"></script>
     </head>
-    <body>
+    <body onload="loadList()">
 <!-- header ------------------------------------->
         <header>
             <nav>
@@ -17,9 +17,8 @@
                 </ul>
             </nav>
             <form>
-                <input list="animals-list" id="animalsearchinput" onload="loadList()">
+                <input list="animals-list" id="animalsearchinput">
                 <datalist id="animals-list">
-                    <option value="keine Einträge">
                 </datalist>
                 <input type="button" value="Suchen" id="submitbutton" onclick="search()">
             </form>
