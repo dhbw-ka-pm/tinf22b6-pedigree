@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
+<animals>
+  <animal>
+    <name>Wuffi</name>
+    <id>ABCDEFGH1</id>
+  </animal>
+  <animal>
+    <name>Bello</name>
+    <id>DEFGH1</id>
+  </animal>
+  <animal>
+    <name>Wauwau</name>
+    <id>ABCD1</id>
+  </animal>
+  <animal>
+    <name>Hundi</name>
+    <id>GH1</id>
+  </animal>
+  <animal>
+    <name>Bella</name>
+    <id>EF1</id>
+  </animal>
+  <animal>
+    <name>Rex</name>
+    <id>CD1</id>
+  </animal>
+  <animal>
+    <name>Fang</name>
+    <id>AB1</id>
+  </animal>
+  <animal>
+    <name>Berchen</name>
+    <id>H1</id>
+  </animal>
+  <animal>
+    <name>Handtaschenratte</name>
+    <id>G1</id>
+  </animal>
+  <animal>
+    <name>Leider tot</name>
+    <id>F1</id>
+  </animal>
+  <animal>
+    <name>sanfter Riese</name>
+    <id>E1</id>
+  </animal>
+  <animal>
+    <name>Doggo</name>
+    <id>D1</id>
+  </animal>
+  <animal>
+    <name>big giant</name>
+    <id>C1</id>
+  </animal>
+  <animal>
+    <name>Alpha</name>
+    <id>B1</id>
+  </animal>
+  <animal>
+    <name>Omega</name>
+    <id>A1</id>
+  </animal>
+</animals>
+
