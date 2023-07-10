@@ -36,20 +36,20 @@ return xhttp.responseXML;
 function loadList()
 {
   console.log("load xml");
-xml = loadXMLDoc("data.xml");
-xsl = loadXMLDoc("list.xsl");
-// code for IE
-if (window.ActiveXObject || xhttp.responseType == "msxml-document")
-  {
-  ex = xml.transformNode(xsl);
-  document.getElementById("pet-box1").innerHTML = ex;
-  }
-// code for Chrome, Firefox, Opera, etc.
-else if (document.implementation && document.implementation.createDocument)
-  {
-  xsltProcessor = new XSLTProcessor();
-  xsltProcessor.importStylesheet(xsl);
-  resultDocument = xsltProcessor.transformToFragment(xml, document);
-  document.getElementById("animals-list").appendChild(resultDocument);
-  }
+    xml = loadXMLDoc("data.xml");
+    xsl = loadXMLDoc("list.xsl");
+    // code for IE
+    if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+    {
+    ex = xml.transformNode(xsl);
+    document.getElementById("pet-box1").innerHTML = ex;
+    }
+    // code for Chrome, Firefox, Opera, etc.
+    else if (document.implementation && document.implementation.createDocument)
+    {
+    xsltProcessor = new XSLTProcessor();
+    xsltProcessor.importStylesheet(xsl);
+    resultDocument = xsltProcessor.transformToFragment(xml, document);
+    document.getElementById("animals-list").appendChild(resultDocument);
+    }
 }
