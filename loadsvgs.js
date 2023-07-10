@@ -40,22 +40,17 @@ return xhttp.responseXML;
 
 function displayResult()
 {
-console.log("Funktion aufgerufen");
 xml = loadXMLDoc("data.xml");
-console.log("XML geladen");
 xsl = loadXMLDoc("transform.xsl");
-console.log("XSLT geladen");
 // code for IE
 if (window.ActiveXObject || xhttp.responseType == "msxml-document")
   {
-    console.log("IE");
   ex = xml.transformNode(xsl);
   document.getElementById("pet-box1").innerHTML = ex;
   }
 // code for Chrome, Firefox, Opera, etc.
 else if (document.implementation && document.implementation.createDocument)
   {
-    console.log("not IE");
   xsltProcessor = new XSLTProcessor();
   xsltProcessor.importStylesheet(xsl);
   resultDocument = xsltProcessor.transformToFragment(xml, document);
