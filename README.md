@@ -1,22 +1,10 @@
 First thing to do!
-Virtuelle Maschine erstellen:
-python -m venv env
+1. Xampp Control Panel runterladen und installieren (Am besten auf C:... wird so empfohlen).
+Link: https://www.apachefriends.org/de/index.html
 
-Virtuelle Maschien starten:
- "./env/Scripts/activate oder ./env/Scripts/activate
- 
-Requirements runterladen und installieren:
- pip install -r requirements.txt
+2. frontend Ordner in dieses Verzeichnis schmeißen:
+   C:\xampp\htdocs\frontend
 
-Vor Start:
-1.  "./env/Scripts/activate oder ./env/Scripts/activate
-2.  python manage.py runserver
-3.  localhost:8000/ oder 127.0.0.1:8000/
+3. XAMPP starten und Module Apache unter dem reiter "Actions" starten drücken
+   Nun ist der lokale Server gestartet und unter localhost/frontend erreichbar
 
-Importante Links:
-https://docs.djangoproject.com/en/4.2/
-Django Dokumentation!
-
-
-https://pip.pypa.io/en/stable/cli/pip_freeze/
-Pip-Freeze Befehl um installierte Bibliotheken in ein requirements.txt zu speichern.
