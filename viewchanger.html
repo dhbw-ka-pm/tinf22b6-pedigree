@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="viewchanger.css">
+        <link rel="stylesheet" type="text/css" href="animalPopup.css">
+        <script type="text/javascript" src="searchanimals.js"></script>
+    </head>
+    <body>
+<!-- header ------------------------------------->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#verwandschaftsrechner" target="_top">Verwandschaft berechnen</a></li>
+                    <li><a href="listview.html" target="_top">Listenansicht</a></li>
+                    <li><a href="pedigree.html" target="_top">Stammbaum</a></li>
+                </ul>
+            </nav>
+            <form>
+                <input list="animals-list" id="animalsearchinput">
+                <datalist id="animals-list">
+                    <option value="keine Einträge">
+                </datalist>
+                <input type="button" value="Suchen" id="submitbutton" onclick="search()">
+            </form>
+        </header>
+
+        <div class="overlay" id="verwandschaftsrechner">
+            <div class="wrapper">
+                <h2>Bitte Formular ausfüllen</h2><a class="close" href="pedigree.html">&times;</a> 
+                <div class="content">
+                    <div class="container">
+                        <form>
+                            <label>1. Tier</label>
+                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinput" type="text" required="required">
+                            <datalist id="animals-list">
+                                <option value="keine Einträge">
+                            </datalist>
+                            
+                            <label>2. Tier</label>
+                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinput" type="text" required="required">
+                            <datalist id="animals-list">
+                                <option value="keine Einträge">
+                            </datalist>
+                            <input type="submit" value="Berechnen" onclick="search()">
+                            <!--<button type="submit" value="Submit"> Abschicken </button>-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </body>
+</html>
