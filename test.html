@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XSLT Transformation</title>
+  <script>
+    function transformXML() {
+      // Load XML document
+      var xmlRequest = new XMLHttpRequest();
+      xmlRequest.open("GET", "data.xml", false);
+      xmlRequest.send();
+      var xmlDocument = xmlRequest.responseXML;
+
+      // Load XSLT stylesheet
+      var xsltRequest = new XMLHttpRequest();
+      xsltRequest.open("GET", "transform.xsl", false);
+      xsltRequest.send();
+      var xsltDocument = xsltRequest.responseXML;
+
+      // Transform XML using XSLT
+      var xsltProcessor = new XSLTProcessor();
+      xsltProcessor.importStylesheet(xsltDocument);
+      var resultDocument = xsltProcessor.transformToDocument(xmlDocument);
+
+      // Display transformed result
+      var serializer = new XMLSerializer();
+      var resultString = serializer.serializeToString(resultDocument);
+      document.getElementById("result").innerHTML = resultString;
+    }
+  </script>
+</head>
+<body>
+  <h1>XSLT Transformation</h1>
+  <button onclick="transformXML()">Transform</button>
+  <div id="result"></div>
+</body>
+</html>
