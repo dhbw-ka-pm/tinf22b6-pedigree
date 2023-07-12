@@ -9,9 +9,11 @@
 <!-- header ------------------------------------->
         <header>
             <nav>
+                <img class="logo"; src="Pedigree_Logo.png">
                 <ul>
                     <li><a href="#new-animal-popup" target="_top">Tier hinzufügen</a></li>
-                    <li><a href="index.html" target="_top">home</a></li>
+                    <li><a href="index.html" target="_top">Home</a></li>
+
                     <li><a href="pedigree.html" target="_top">Stammbaum</a></li>
                     <li><a href="impressum.html" target="_top">Impressum</a></li>
                 </ul>
@@ -23,21 +25,19 @@
                 <h2>Bitte Formular ausfüllen</h2><a class="close" href="pedigree.html">&times;</a> 
                 <div class="content">
                     <div class="container">
-                        <form method="POST">
-                            <label>Name</label>
-                            <input placeholder="Name" type="text" name="name">
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                             <label>Rasse</label>
                             <input placeholder="Rasse" type="text" name="rasse">
-                            <label>Farbe</label> 
+                            <label>Farbe</label>
                             <input placeholder="Farbe" type="text" name="farbe">
-                            <label>Quellenzucht</label> 
-                            <input placeholder="Quellenzucht" type="text" name="quelle_zucht">
+                            <label>Quelle Zucht</label> 
+                            <input placeholder="Quelle Zucht" type="text" name="quelle_zucht">
                             <label>Vatertier</label>
-                            <input placeholder="Name des Vaters" type="text" name="vatertier">
+                            <input placeholder="Name" type="text" name="vatertier">
                             <label>Muttertier</label>
-                            <input placeholder="Name der Mutter" type="text" name="muttertier">
+                            <input placeholder="Name" type="text" name="muttertier">
                             <label>Jungtiere</label>
-                            <input placeholder="Jungtiere" type="text" name="jungtiere">
+                            <input placeholder="Name" type="text" name="jungtiere">
                             <label>Kurzbeschreibung</label>
                             <input placeholder="Beschreibung" type="text" name="kurzbeschreibung">
                             <input type="submit" value="Absenden">
