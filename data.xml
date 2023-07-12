@@ -4,62 +4,92 @@
   <animal>
     <name>Wuffi</name>
     <id>ABCDEFGH1</id>
+    <parent1>EFGH1</parent1>
+    <parent2>ABCD1</parent2>
   </animal>
   <animal>
     <name>Bello</name>
-    <id>DEFGH1</id>
+    <id>EFGH1</id>
+    <parent1>GH1</parent1>
+    <parent2>EF1</parent2>
   </animal>
   <animal>
     <name>Wauwau</name>
     <id>ABCD1</id>
+    <parent1>AB1</parent1>
+    <parent2>CD1</parent2>
   </animal>
   <animal>
     <name>Hundi</name>
     <id>GH1</id>
+    <parent1>G1</parent1>
+    <parent2>H1</parent2>
   </animal>
   <animal>
     <name>Bella</name>
     <id>EF1</id>
+    <parent1>E1</parent1>
+    <parent2>F1</parent2>
   </animal>
   <animal>
     <name>Rex</name>
     <id>CD1</id>
+    <parent1>C1</parent1>
+    <parent2>D1</parent2>
   </animal>
   <animal>
     <name>Fang</name>
     <id>AB1</id>
+    <parent1>A1</parent1>
+    <parent2>B1</parent2>
   </animal>
   <animal>
     <name>Bärchen</name>
     <id>H1</id>
+    <parent1></parent1>
+    <parent2></parent2>
   </animal>
   <animal>
     <name>Handtaschenratte</name>
     <id>G1</id>
+    <parent1></parent1>
+    <parent2></parent2>
   </animal>
   <animal>
     <name>Leider tot</name>
     <id>F1</id>
+    <parent1></parent1>
+    <parent2></parent2>
   </animal>
   <animal>
     <name>sanfter Riese</name>
     <id>E1</id>
+    <parent1></parent1>
+    <parent2></parent2>
   </animal>
   <animal>
     <name>Doggo</name>
     <id>D1</id>
+    <parent1></parent1>
+    <parent2></parent2>
   </animal>
   <animal>
     <name>big giant</name>
     <id>C1</id>
+    <parent1></parent1>
+    <parent2></parent2>
   </animal>
   <animal>
     <name>Alpha</name>
     <id>B1</id>
+    <parent1></parent1>
+    <parent2></parent2>
   </animal>
   <animal>
     <name>Omega</name>
     <id>A1</id>
+    <parent1></parent1>
+    <parent2></parent2>
   </animal>
 </animals>
 
