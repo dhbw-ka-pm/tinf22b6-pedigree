@@ -4,62 +4,92 @@
   <animal>
     <name>Wuffi</name>
     <id>ABCDEFGH1</id>
+    <elternteil1>EFGH1</elternteil1>
+    <elternteil2>ABCD1</elternteil2>
   </animal>
   <animal>
     <name>Bello</name>
-    <id>DEFGH1</id>
+    <id>EFGH1</id>
+    <elternteil1>GH1</elternteil1>
+    <elternteil2>EF1</elternteil2>
   </animal>
   <animal>
     <name>Wauwau</name>
     <id>ABCD1</id>
+    <elternteil1>AB1</elternteil1>
+    <elternteil2>CD1</elternteil2>
   </animal>
   <animal>
     <name>Hundi</name>
     <id>GH1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Bella</name>
     <id>EF1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Rex</name>
     <id>CD1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Fang</name>
     <id>AB1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Bärchen</name>
     <id>H1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Handtaschenratte</name>
     <id>G1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Leider tot</name>
     <id>F1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>sanfter Riese</name>
     <id>E1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Doggo</name>
     <id>D1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>big giant</name>
     <id>C1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Alpha</name>
     <id>B1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
   <animal>
     <name>Omega</name>
     <id>A1</id>
+    <elternteil1></elternteil1>
+    <elternteil2></elternteil2>
   </animal>
 </animals>
 
