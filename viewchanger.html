@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="viewchanger.css">
         <link rel="stylesheet" type="text/css" href="animalPopup.css">
         <script type="text/javascript" src="searchanimals.js"></script>
     </head>
-    <body>
+    <body onload="loadList()">
 <!-- header ------------------------------------->
         <header>
             <nav>
@@ -18,7 +19,6 @@
             <form>
                 <input list="animals-list" id="animalsearchinput">
                 <datalist id="animals-list">
-                    <option value="keine Einträge">
                 </datalist>
                 <input type="button" value="Suchen" id="submitbutton" onclick="search()">
             </form>
@@ -26,22 +26,23 @@
 
         <div class="overlay" id="verwandschaftsrechner">
             <div class="wrapper">
-                <h2>Bitte Tiere auswählen</h2><a class="close" href="pedigree.html">&times;</a> 
+                <h2>Bitte Formular ausfüllen</h2><a class="close" href="pedigree.html">&times;</a> 
                 <div class="content">
                     <div class="container">
                         <form>
-                            <label>Vater Tier</label>
-                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinputVater" type="text" required="required">
-                            <datalist id="animals-listVater">
+                            <label>1. Tier</label>
+                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinput1" type="text" required="required">
+                            <datalist id="animals-list">
                                 <option value="keine Einträge">
                             </datalist>
                             
-                            <label>Mutter Tier</label>
-                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinputMutter" type="text" required="required">
-                            <datalist id="animals-listMutter">
+                            <label>2. Tier</label>
+                            <input list="animals-list" placeholder="Tier auswählen" id="animalsearchinput2" type="text" required="required">
+                            <datalist id="animals-list">
                                 <option value="keine Einträge">
                             </datalist>
-                            <input type="submit2" value="Berechnen" onclick="search()">
+                            <input type="submit" value="Berechnen" onclick="search()">
+                            <!--<button type="submit" value="Submit"> Abschicken </button>-->
                         </form>
                     </div>
                 </div>
