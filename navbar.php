@@ -24,96 +24,74 @@
                 <h2>Bitte Formular ausfüllen</h2><a class="close" href="pedigree.html">&times;</a> 
                 <div class="content">
                     <div class="container">
-                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        <form method="POST">
+                            <label>Name</label>
+                            <input placeholder="Name" type="text" name="name">
                             <label>Rasse</label>
                             <input placeholder="Rasse" type="text" name="rasse">
-                            <label>Farbe</label>
+                            <label>Farbe</label> 
                             <input placeholder="Farbe" type="text" name="farbe">
-                            <label>Quelle Zucht</label> 
-                            <input placeholder="Quelle Zucht" type="text" name="quelle_zucht">
+                            <label>Quellenzucht</label> 
+                            <input placeholder="Quellenzucht" type="text" name="quelle_zucht">
                             <label>Vatertier</label>
-                            <input placeholder="Name" type="text" name="vatertier">
+                            <input placeholder="Name des Vaters" type="text" name="vatertier">
                             <label>Muttertier</label>
-                            <input placeholder="Name" type="text" name="muttertier">
-                            <label>Jungtiere</label>
-                            <input placeholder="Name" type="text" name="jungtiere">
+                            <input placeholder="Name der Mutter" type="text" name="muttertier">
                             <label>Kurzbeschreibung</label>
                             <input placeholder="Beschreibung" type="text" name="kurzbeschreibung">
                             <input type="submit" value="Absenden">
                         </form>
-                        <p id="test"></p>
                     </div>
                 </div>
             </div>
         </div> 
         <?php
-        // Überprüfe, ob das Formular abgesendet wurde
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            // Erfasse die Formulardaten
+            $name = $_POST["name"];
             $rasse = $_POST["rasse"];
             $farbe = $_POST["farbe"];
             $quelle_zucht = $_POST["quelle_zucht"];
             $vatertier = $_POST["vatertier"];
             $muttertier = $_POST["muttertier"];
-            $jungtiere = $_POST["jungtiere"];
             $kurzbeschreibung = $_POST["kurzbeschreibung"];
+n
+            $filename = 'data.xml';
 
-            // Pfade und Dateinamen anpassen
-            $filename = 'existing_data.xml';
-
-            if (file_exists($filename)) {
-                // Lade die vorhandene XML-Datei
-                $existingData = simplexml_load_file($filename);
-
-                // Füge ein neues <animal>-Element hinzu
-                $newAnimal = $existingData->addChild('animal');
+            function addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $kurzbeschreibung, $xmlData, $filename, $addStylesheet = false) {
+                $newAnimal = $xmlData->addChild('animal');
+                $newAnimal->addChild('name', $name);
                 $newAnimal->addChild('rasse', $rasse);
                 $newAnimal->addChild('farbe', $farbe);
                 $newAnimal->addChild('quelle_zucht', $quelle_zucht);
-                $newAnimal->addChild('parent1', $vatertier);
-                $newAnimal->addChild('parent2', $muttertier);
-                $newAnimal->addChild('jungtiere', $jungtiere);
+                $newAnimal->addChild('vatertier', $vatertier);
+                $newAnimal->addChild('muttertier', $muttertier);
                 $newAnimal->addChild('kurzbeschreibung', $kurzbeschreibung);
-                
-                // Formatierung des XML-Dokuments
+            
                 $dom = new DOMDocument();
-                $dom->version = '1.0';
-                $dom->encoding = 'UTF-8';
                 $dom->preserveWhiteSpace = false;
                 $dom->formatOutput = true;
-                $dom->loadXML($existingData->asXML());
-                
-                // Speichere die aktualisierte XML-Datei
-                $dom->save($filename);
-            } else {
-                // Erstelle eine neue XML-Datei mit den Daten
-                $xmldata = new SimpleXMLElement('<animals></animals>');
-                $animal = $xmldata->addChild('animal');
-                $animal->addChild('rasse', $rasse);
-                $animal->addChild('farbe', $farbe);
-                $animal->addChild('quelle_zucht', $quelle_zucht);
-                $animal->addChild('parent1', $vatertier);
-                $animal->addChild('parent2', $muttertier);
-                $animal->addChild('jungtiere', $jungtiere);
-                $animal->addChild('kurzbeschreibung', $kurzbeschreibung);
-                
-                // Formatierung des XML-Dokuments
-                $dom = new DOMDocument();
-                $dom->version = '1.0';
-                $dom->encoding = 'UTF-8';
-                $dom->preserveWhiteSpace = false;
-                $dom->formatOutput = true;
-                $dom->loadXML($xmldata->asXML());
-                
-                // Füge Stylesheet-Attribut hinzu
-                $stylesheet = $dom->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="transform.xslt"');
-                $dom->insertBefore($stylesheet, $dom->documentElement);
-                
-                // Speichere die neue XML-Datei
+                $dom->loadXML($xmlData->asXML());
+            
+                if ($addStylesheet) {
+
+                    $stylesheet = $dom->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="transform.xslt"');
+                    $dom->insertBefore($stylesheet, $dom->documentElement);
+                }
                 $dom->save($filename);
             }
+            
 
-        }
+            if (!file_exists($filename)) {
+                $xmlData = new SimpleXMLElement('<animals></animals>');
+                addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $kurzbeschreibung, $xmlData, $filename, true);
+            } else {
+                $xmlData = simplexml_load_file($filename);
+                addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $kurzbeschreibung, $xmlData, $filename, false);
+            }
+            
+            }
+
+        
         ?>
     </body>
 </html>
