@@ -46,50 +46,66 @@
   <animal>
     <name>Bärchen</name>
     <id>H1</id>
-    <parent1></parent1>
-    <parent2></parent2>
+    <parent1/>
+    <parent2/>
   </animal>
   <animal>
     <name>Handtaschenratte</name>
     <id>G1</id>
-    <parent1></parent1>
-    <parent2></parent2>
+    <parent1/>
+    <parent2/>
   </animal>
   <animal>
     <name>Leider tot</name>
     <id>F1</id>
-    <parent1></parent1>
-    <parent2></parent2>
+    <parent1/>
+    <parent2/>
   </animal>
   <animal>
     <name>sanfter Riese</name>
     <id>E1</id>
-    <parent1></parent1>
-    <parent2></parent2>
+    <parent1/>
+    <parent2/>
   </animal>
   <animal>
     <name>Doggo</name>
     <id>D1</id>
-    <parent1></parent1>
-    <parent2></parent2>
+    <parent1/>
+    <parent2/>
   </animal>
   <animal>
     <name>big giant</name>
     <id>C1</id>
-    <parent1></parent1>
-    <parent2></parent2>
+    <parent1/>
+    <parent2/>
   </animal>
   <animal>
     <name>Alpha</name>
     <id>B1</id>
-    <parent1></parent1>
-    <parent2></parent2>
+    <parent1/>
+    <parent2/>
   </animal>
   <animal>
     <name>Omega</name>
     <id>A1</id>
-    <parent1></parent1>
-    <parent2></parent2>
+    <parent1/>
+    <parent2/>
   </animal>
-</animals>
-
+  <animal>
+    <rasse>d</rasse>
+    <farbe>d</farbe>
+    <quelle_zucht>d</quelle_zucht>
+    <parent1>r</parent1>
+    <parent2>r</parent2>
+    <jungtiere>r</jungtiere>
+    <kurzbeschreibung>r</kurzbeschreibung>
+  </animal>
+  <animal>
+    <rasse>Rasse</rasse>
+    <farbe>Farbe</farbe>
+    <quelle_zucht>Quelle</quelle_zucht>
+    <parent1>Wuffi</parent1>
+    <parent2>Bello</parent2>
+    <jungtiere>2</jungtiere>
+    <kurzbeschreibung>Blabla</kurzbeschreibung>
+  </animal>
