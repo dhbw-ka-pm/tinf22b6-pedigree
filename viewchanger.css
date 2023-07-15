@@ -44,7 +44,7 @@ nav ul li:hover {
 }
 
 nav ul li a {
-    color:rgb(68, 68, 68);
+    color:rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -63,13 +63,14 @@ input {
     border-width: 1px;
     font-family: 'Roboto', sans-serif;
     color:rgb(68, 68, 68);
-    background-color: white;
+    background-color: grey;
     font-weight: bold;
     height: 20px;
 }
 
 #submitbutton {
     height: 23.6px;
+    color: black;
 }
 
 #submitbutton:hover {

@@ -34,7 +34,7 @@
 .wrapper {
 	margin: 70px auto;
 	padding: 20px;
-	background: #e7e7e7;
+	background: #007a10;
 	border-radius: 5px;
 	width: 30%;
 	position: relative;
@@ -67,7 +67,7 @@
 
 .container {
 	border-radius: 5px;
-	background-color: #e7e7e7;
+	background-color: #007a10;
 	padding: 20px 0;
 }
 form label {
@@ -78,16 +78,18 @@ form label {
 input[type=text], select, textarea {
 	width: 100%;
 	padding: 12px;
-	border: 1px solid #ccc;
+	border: 1px solid #007a10;
 	border-radius: 4px;
 	box-sizing: border-box;
 	margin-top: 6px;
 	margin-bottom: 16px;
 	resize: vertical;
+	background-color:#403e3d ;
+	color: white;
 }
 input[type="submit"] {
 	background-color: #000000;
-	color: #fff;
+	color: #007a10;
 	padding: 15px 50px;
 	border: none;
 	border-radius: 50px;
