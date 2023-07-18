@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="transform.xslt"?>
-<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
 <animals>
   <animal>
     <name>r</name>
@@ -21,5 +20,25 @@
     <parent2>r</parent2>
     <jungtiere>r</jungtiere>
     <kurzbeschreibung>r</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>d</name>
+    <rasse>d</rasse>
+    <farbe>d</farbe>
+    <quelle_zucht>d</quelle_zucht>
+    <parent1>d</parent1>
+    <parent2>d</parent2>
+    <jungtiere>d</jungtiere>
+    <kurzbeschreibung>d</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>d</name>
+    <rasse>d</rasse>
+    <farbe>d</farbe>
+    <quelle_zucht>d</quelle_zucht>
+    <parent1>d</parent1>
+    <parent2>d</parent2>
+    <jungtiere>d</jungtiere>
+    <kurzbeschreibung>d</kurzbeschreibung>
   </animal>
 </animals>
