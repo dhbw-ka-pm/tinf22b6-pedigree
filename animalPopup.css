@@ -34,16 +34,17 @@
 .wrapper {
 	margin: 70px auto;
 	padding: 20px;
-	background: #007a10;
+	background: #254b29;
 	border-radius: 5px;
 	width: 30%;
 	position: relative;
 	top: 10%;
+	color: lightgray;
 	/*transition: all 5s ease-in-out;*/
 }
 .wrapper h2 {
 	margin-top: 0;
-	color: #333;
+	color: lightgray;
 }
 .wrapper .close {
 	position: absolute;
@@ -53,7 +54,7 @@
 	font-size: 30px;
 	font-weight: bold;
 	text-decoration: none;
-	color: #333;
+	color: lightgray;
 }
 .wrapper .close:hover {
 	color: #06D85F;
@@ -67,7 +68,7 @@
 
 .container {
 	border-radius: 5px;
-	background-color: #007a10;
+	background-color: #254b29;
 	padding: 20px 0;
 }
 form label {
@@ -78,18 +79,18 @@ form label {
 input[type=text], select, textarea {
 	width: 100%;
 	padding: 12px;
-	border: 1px solid #007a10;
+	border: 1px solid #254b29;
 	border-radius: 4px;
 	box-sizing: border-box;
 	margin-top: 6px;
 	margin-bottom: 16px;
 	resize: vertical;
-	background-color:#403e3d ;
+	background-color:white ;
 	color: white;
 }
 input[type="submit"] {
 	background-color: #000000;
-	color: #007a10;
+	color: lightgray;
 	padding: 15px 50px;
 	border: none;
 	border-radius: 50px;
