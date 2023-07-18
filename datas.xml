@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
+<animals>
+  <animal>
+    <name>r</name>
+    <rasse>r</rasse>
+    <farbe>r</farbe>
+    <quelle_zucht>r</quelle_zucht>
+    <parent1>r</parent1>
+    <parent2>r</parent2>
+    <jungtiere>r</jungtiere>
+    <kurzbeschreibung>r</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>r</name>
+    <rasse>r</rasse>
+    <farbe>r</farbe>
+    <quelle_zucht>r</quelle_zucht>
+    <parent1>r</parent1>
+    <parent2>r</parent2>
+    <jungtiere>r</jungtiere>
+    <kurzbeschreibung>r</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>r</name>
+    <rasse>r</rasse>
+    <farbe>r</farbe>
+    <quelle_zucht>r</quelle_zucht>
+    <parent1>r</parent1>
+    <parent2>r</parent2>
+    <jungtiere>r</jungtiere>
+    <kurzbeschreibung>r</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>r</name>
+    <rasse>r</rasse>
+    <farbe>r</farbe>
+    <quelle_zucht>r</quelle_zucht>
+    <parent1>r</parent1>
+    <parent2>r</parent2>
+    <jungtiere>r</jungtiere>
+    <kurzbeschreibung>r</kurzbeschreibung>
+  </animal>
+</animals>
