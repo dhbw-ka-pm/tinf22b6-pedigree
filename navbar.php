@@ -58,7 +58,7 @@
             $jungtiere=$_POST["jungtiere"];
             $kurzbeschreibung = $_POST["kurzbeschreibung"];
 
-            $filename = 'datas.xml';
+            $filename = 'data.xml';
 
             function addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier,$jungtiere, $kurzbeschreibung, $xmlData, $filename, $addStylesheet = false) {
                 $newAnimal = $xmlData->addChild('animal');
@@ -89,15 +89,9 @@
             addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $jungtiere, $kurzbeschreibung, $xmlData, $filename, true);
         } else {
             $xmlData = simplexml_load_file($filename);
-            if ($xmlData !== false) {
-                addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $jungtiere, $kurzbeschreibung, $xmlData, $filename, false);
-            } else {
-                echo "Failed to load the XML file: $filename";
-            }
+            addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $jungtiere, $kurzbeschreibung, $xmlData, $filename, true);
         }
-
-            
-            }
+    }
 
         
         ?>
