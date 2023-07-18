@@ -77,6 +77,7 @@ function loadList()
     xsltProcessor = new XSLTProcessor();
     xsltProcessor.importStylesheet(xsl);
     resultDocument = xsltProcessor.transformToFragment(xml, document);
+    document.getElementById("animals-list").innerHTML = "";
     document.getElementById("animals-list").appendChild(resultDocument);
     }
 }
