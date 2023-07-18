@@ -2,43 +2,163 @@
 <?xml-stylesheet type="text/xsl" href="transform.xslt"?>
 <animals>
   <animal>
-    <name>r</name>
-    <rasse>r</rasse>
-    <farbe>r</farbe>
-    <quelle_zucht>r</quelle_zucht>
-    <parent1>r</parent1>
-    <parent2>r</parent2>
-    <jungtiere>r</jungtiere>
-    <kurzbeschreibung>r</kurzbeschreibung>
+    <name>Wuffi</name>
+    <rasse>Golden Retriever</rasse>
+    <farbe>Gold</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1>Bello</parent1>
+    <parent2>Wauwau</parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Ein sehr ruhiges Tier</kurzbeschreibung>
   </animal>
   <animal>
-    <name>r</name>
-    <rasse>r</rasse>
-    <farbe>r</farbe>
-    <quelle_zucht>r</quelle_zucht>
-    <parent1>r</parent1>
-    <parent2>r</parent2>
-    <jungtiere>r</jungtiere>
-    <kurzbeschreibung>r</kurzbeschreibung>
+    <name>Bello</name>
+    <rasse>belgischer Schäferhund</rasse>
+    <farbe>Braun</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1>Hundi</parent1>
+    <parent2>Bella</parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Ein starkes Tier</kurzbeschreibung>
   </animal>
   <animal>
-    <name>d</name>
-    <rasse>d</rasse>
-    <farbe>d</farbe>
-    <quelle_zucht>d</quelle_zucht>
-    <parent1>d</parent1>
-    <parent2>d</parent2>
-    <jungtiere>d</jungtiere>
-    <kurzbeschreibung>d</kurzbeschreibung>
+    <name>Wauwau</name>
+    <rasse>Chiwawa</rasse>
+    <farbe>Weiß</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1>Fang</parent1>
+    <parent2>Rex</parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Sehr klein</kurzbeschreibung>
   </animal>
   <animal>
-    <name>d</name>
-    <rasse>d</rasse>
-    <farbe>d</farbe>
-    <quelle_zucht>d</quelle_zucht>
-    <parent1>d</parent1>
-    <parent2>d</parent2>
-    <jungtiere>d</jungtiere>
-    <kurzbeschreibung>d</kurzbeschreibung>
+    <name>Hundi</name>
+    <rasse>Dalmatiner</rasse>
+    <farbe>Weiß mit schwarzen Punkten</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1>Handtaschenratte</parent1>
+    <parent2>Bärchen</parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Ein seh schönes Tier</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Bella</name>
+    <rasse>Pudel</rasse>
+    <farbe>Weiß</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1>sanfter Riese</parent1>
+    <parent2>Leider tot</parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Legt Wert auf ihr Äußeres</kurzbeschreibung>
+  </animal>
+    <animal>
+    <name>Bella2</name>
+    <rasse>Pudel</rasse>
+    <farbe>Weiß</farbe>
+    <quelle_zucht>0</quelle_zucht>
+    <parent1>sanfter Riese</parent1>
+    <parent2>Leider tot</parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Mag den Friseur nicht</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Rex</name>
+    <rasse>deutscher Schäferhund</rasse>
+    <farbe>Braun/Schwarz</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1>big giant</parent1>
+    <parent2>Doggo</parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Sehr schnell</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Fang</name>
+    <rasse>deutsche Dogge</rasse>
+    <farbe>Schwarz</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1>Omega</parent1>
+    <parent2>Alpha</parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Sehr großes Tier</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Bärchen</name>
+    <rasse>Mops</rasse>
+    <farbe>Braun</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1></parent1>
+    <parent2></parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Recht klein, aber putzig</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Handtaschenratte</name>
+    <rasse>Chiwawa</rasse>
+    <farbe>Weiß</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1></parent1>
+    <parent2></parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Nicht sehr beweglich, wird gerne getragen</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Leider tot</name>
+    <rasse>Unbekannt</rasse>
+    <farbe>Unbekannt</farbe>
+    <quelle_zucht>2</quelle_zucht>
+    <parent1></parent1>
+    <parent2></parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Leider verstorben, bevor Daten gesammelt werden konnten</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>sanfter Riese</name>
+    <rasse>irischer Wolfshund</rasse>
+    <farbe>Grau</farbe>
+    <quelle_zucht>2</quelle_zucht>
+    <parent1></parent1>
+    <parent2></parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Sehr groß und gutmütig</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Doggo</name>
+    <rasse>Rottwewiler</rasse>
+    <farbe>Schwarz/Braun</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1></parent1>
+    <parent2></parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Kampfhund</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>big giant</name>
+    <rasse>Neufundländer</rasse>
+    <farbe>Grau</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1></parent1>
+    <parent2></parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Sehr groß</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Alpha</name>
+    <rasse>Kangal</rasse>
+    <farbe>Hellbraun</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1></parent1>
+    <parent2></parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Sehr dominant</kurzbeschreibung>
+  </animal>
+  <animal>
+    <name>Omega</name>
+    <rasse>Dackel</rasse>
+    <farbe>Braun</farbe>
+    <quelle_zucht>1</quelle_zucht>
+    <parent1></parent1>
+    <parent2></parent2>
+    <jungtiere></jungtiere>
+    <kurzbeschreibung>Relativ klein und sehr unterwürfig</kurzbeschreibung>
   </animal>
 </animals>
