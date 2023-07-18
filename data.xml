@@ -4,44 +4,50 @@
   <animal>
     <name>Wuffi</name>
     <id>ABCDEFGH1</id>
-    <parent1>EFGH1</parent1>
-    <parent2>ABCD1</parent2>
+    <parent1>Bello</parent1>
+    <parent2>Wauwau</parent2>
   </animal>
   <animal>
     <name>Bello</name>
     <id>EFGH1</id>
-    <parent1>GH1</parent1>
-    <parent2>EF1</parent2>
+    <parent1>Hundi</parent1>
+    <parent2>Bella</parent2>
   </animal>
   <animal>
     <name>Wauwau</name>
     <id>ABCD1</id>
-    <parent1>AB1</parent1>
-    <parent2>CD1</parent2>
+    <parent1>Fang</parent1>
+    <parent2>Rex</parent2>
   </animal>
   <animal>
     <name>Hundi</name>
     <id>GH1</id>
-    <parent1>G1</parent1>
-    <parent2>H1</parent2>
+    <parent1>Handtaschenratte</parent1>
+    <parent2>Bärchen</parent2>
   </animal>
   <animal>
     <name>Bella</name>
     <id>EF1</id>
-    <parent1>E1</parent1>
-    <parent2>F1</parent2>
+    <parent1>sanfter Riese</parent1>
+    <parent2>Leider tot</parent2>
+  </animal>
+    <animal>
+    <name>Bella2</name>
+    <id>EF1</id>
+    <parent1>sanfter Riese</parent1>
+    <parent2>Leider tot</parent2>
   </animal>
   <animal>
     <name>Rex</name>
     <id>CD1</id>
-    <parent1>C1</parent1>
-    <parent2>D1</parent2>
+    <parent1>big giant</parent1>
+    <parent2>Doggo</parent2>
   </animal>
   <animal>
     <name>Fang</name>
     <id>AB1</id>
-    <parent1>A1</parent1>
-    <parent2>B1</parent2>
+    <parent1>Omega</parent1>
+    <parent2>Alpha</parent2>
   </animal>
   <animal>
     <name>Bärchen</name>

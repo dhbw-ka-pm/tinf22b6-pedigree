@@ -1,3 +1,4 @@
+//SVG ----------------------------------------------------------------------------------------
 function loadsvg(){
   let list = window.parent.document.getElementsByTagName("svg");
   for (let l of list){
@@ -12,13 +13,14 @@ function loadsvg(){
   }
 }
 
-
 function setLineAttributes(element, x1, x2, y1, y2){
   element.setAttribute("x1", x1);
   element.setAttribute("x2", x2);
   element.setAttribute("y1", y1);
   element.setAttribute("y2", y2);
 }
+
+// Auswahl Tier aus der Liste --------------------------------------------------
 
 function search(){
     console.log("such aufruf")
@@ -40,6 +42,8 @@ function search(){
 }
 
 
+// XSLT ---------------------------------------------------------------------
+
 function loadXMLDoc(filename)
 {
 if (window.ActiveXObject)
@@ -58,16 +62,16 @@ return xhttp.responseXML;
 
 function loadList() 
 {
-  console.log("load xml");
+  //console.log("load xml");
     xml = loadXMLDoc("data.xml");
     xsl = loadXMLDoc("xslt/list.xsl");
-    // code for IE
+
     if (window.ActiveXObject || xhttp.responseType == "msxml-document")
     {
     ex = xml.transformNode(xsl);
     document.getElementById("pet-box1").innerHTML = ex;
     }
-    // code for Chrome, Firefox, Opera, etc.
+
     else if (document.implementation && document.implementation.createDocument)
     {
     xsltProcessor = new XSLTProcessor();
@@ -78,23 +82,19 @@ function loadList()
 }
 
 function displayXMLwithParam(xmlPath, xslPath, element, searchstring) {
-  console.log("load xml");
+  //console.log("load xml");
     xml = loadXMLDoc(xmlPath);
     xsl = loadXMLDoc(xslPath);
-    // code for IE
+
     if (window.ActiveXObject || xhttp.responseType == "msxml-document")
     {
     ex = xml.transformNode(xsl);
     document.getElementById("pet-box1").innerHTML = ex;
     }
-    // code for Chrome, Firefox, Opera, etc.
+
     else if (document.implementation && document.implementation.createDocument)
     {
     xsltProcessor = new XSLTProcessor();
-
-    //let xmlDoc = document.implementation.createDocument("", "", null);
-    //let paramValue = searchstring;
-    //xmlDoc.appendChild(xmlDoc.createTextNode(paramValue));
     
     xsltProcessor.setParameter(null, "searchstring", searchstring);
 
@@ -102,4 +102,105 @@ function displayXMLwithParam(xmlPath, xslPath, element, searchstring) {
     resultDocument = xsltProcessor.transformToFragment(xml, document);
     element.appendChild(resultDocument);
     }
+}
+
+
+// Verwandschaftsrechner ------------------------------------------------------------------------
+function calculate(){
+  const oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+
+  function reportStatus() {
+    if (oXHR.readyState == 4)       //  request completed.
+        testAnimals(this.responseXML);      // Now show the data.
+  }
+
+  oXHR.onreadystatechange = reportStatus;
+  oXHR.open("GET", "data.xml", true);      
+  oXHR.send();
+}
+
+function testAnimals(){
+  let animal1 = document.getElementById("animalsearchinput1").value;
+  let animal2 = document.getElementById("animalsearchinput2").value;
+  let result = testOneAnimal(animal1, animal2, this.responseXML);
+  console.log("result" + result);
+  if(result == undefined){
+    result = testOneAnimal(animal2, animal1, this.responseXML);
+  }
+  if(result == undefined){
+    result = "Es konnte kein Verwandschaftsverhältnis <= 3 Grades (ausgenommen Urgroßeltern-/enkel) festgestellt werden";
+  }
+  document.getElementById("output-field").innerHTML = result;
+}
+
+function testOneAnimal(testedAnimal, searchedAnimal){
+  let parent1;
+  let parent2;
+  let grandparents = [];
+  let animals = xml.getElementsByTagName("animal");
+  //ließt die Eltern
+  for (let i = 0; i < animals.length; i++) {
+    if(animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == testedAnimal){
+      if(animals[i].getElementsByTagName("parent1")[0].childNodes[0]!=undefined){
+        parent1 = animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue;
+      }
+      if(animals[i].getElementsByTagName("parent2")[0].childNodes[0]!=undefined){
+        parent2 = animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue;
+      }
+    }
+  }
+  //Überprüft die Eltern
+  if(parent1 == searchedAnimal || parent2 == searchedAnimal){
+    return testedAnimal + " ist ein Kind von " + searchedAnimal;
+  }
+  //Testet auf Geschwister
+  for (let i = 0; i < animals.length; i++) {
+    if(animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == searchedAnimal){
+      if(((animals[i].getElementsByTagName("parent1")[0].childNodes[0]!=undefined) && (animals[i].getElementsByTagName("parent2")[0].childNodes[0]!=undefined)) &&
+        (((animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue == parent1) || (animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue == parent2)) &&
+         ((animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue == parent1) || (animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue == parent2)))){
+          return testedAnimal + " ist ein Geschwisterkind von " + searchedAnimal;
+      }
+      else {
+        break;
+      }
+    }
+  }
+
+  //Ließt die Großeltern
+  for (let i = 0; i < animals.length; i++) {
+    if((animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == parent1) || (animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == parent2)){
+      if(animals[i].getElementsByTagName("parent1")[0].childNodes[0]!=undefined){
+        console.log(animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue);
+        grandparents.push(animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue); 
+      }
+      if(animals[i].getElementsByTagName("parent2")[0].childNodes[0]!=undefined){
+        grandparents.push(animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue);
+      }
+    }
+  }
+  //testet auf Großeltern
+  for (let i = 0; i < grandparents.length; i++) {
+    //console.log("GP: "+ grandparents[i] + " SA:" + searchedAnimal);
+    //console.log(grandparents[i] == searchedAnimal);
+    if(grandparents[i] == searchedAnimal){
+      return testedAnimal + " ist ein Enkel von " + searchedAnimal;
+    }
+  }
+  console.log("kein Großelternteil");
+  //Testet auf Onkel/Tante
+  for (let i = 0; i < animals.length; i++) {
+    if(animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == searchedAnimal){
+      console.log("N: " + animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+      for (let j = 0; j < grandparents.length; j++) {
+        //console.log("GP:" + grandparents[i]);
+        //console.log("P1: " + animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue);
+        //console.log("P2: " + animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue);
+        if((grandparents[j] == animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue) || (grandparents[j] == animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue)){
+          return searchedAnimal + " ist ein/e Onkel/Tante von " + testedAnimal;
+        }
+      }
+    }
+  }
+  return;
 }
