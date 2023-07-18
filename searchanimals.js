@@ -23,7 +23,7 @@ function setLineAttributes(element, x1, x2, y1, y2){
 // Auswahl Tier aus der Liste --------------------------------------------------
 
 function search(){
-    console.log("such aufruf")
+    //console.log("such aufruf")
     let searchstring = document.getElementById("animalsearchinput").value;
     if (searchstring == "keine Einträge"){
         window.alert('Entschuldigung, aber aktuell sind keine Eiträge vorhanden.\nErstellen Sie Einträge in dem Sie auf "Tier hinzufügen" klicken');
@@ -32,7 +32,7 @@ function search(){
         alert("Bitte wählen Sie ein Eintrag aus der Liste aus");
     }
     else {
-        console.log(searchstring);
+        //console.log(searchstring);
         let pdoc = window.parent.document;
         element = pdoc.getElementById("tree-box");
         element.innerHTML='';
@@ -106,26 +106,13 @@ function displayXMLwithParam(xmlPath, xslPath, element, searchstring) {
 
 
 // Verwandschaftsrechner ------------------------------------------------------------------------
-function calculate(){
-  const oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-
-  function reportStatus() {
-    if (oXHR.readyState == 4)       //  request completed.
-        testAnimals(this.responseXML);      // Now show the data.
-  }
-
-  oXHR.onreadystatechange = reportStatus;
-  oXHR.open("GET", "data.xml", true);      
-  oXHR.send();
-}
-
 function testAnimals(){
   let animal1 = document.getElementById("animalsearchinput1").value;
   let animal2 = document.getElementById("animalsearchinput2").value;
-  let result = testOneAnimal(animal1, animal2, this.responseXML);
+  let result = testOneAnimal(animal1, animal2);
   console.log("result" + result);
   if(result == undefined){
-    result = testOneAnimal(animal2, animal1, this.responseXML);
+    result = testOneAnimal(animal2, animal1);
   }
   if(result == undefined){
     result = "Es konnte kein Verwandschaftsverhältnis <= 3 Grades (ausgenommen Urgroßeltern-/enkel) festgestellt werden";
@@ -138,6 +125,7 @@ function testOneAnimal(testedAnimal, searchedAnimal){
   let parent2;
   let grandparents = [];
   let animals = xml.getElementsByTagName("animal");
+  console.log(xml);
   //ließt die Eltern
   for (let i = 0; i < animals.length; i++) {
     if(animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == testedAnimal){

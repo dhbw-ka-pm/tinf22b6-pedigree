@@ -23,24 +23,119 @@ function setLineAttributes(element, x1, x2, y1, y2){
 // Info-Pop-Up ----------------------------------------------------------------
 function popup(button){
   document.getElementById("overlay").classList.toggle("active");
-  document.getElementById("pop-up-title").innerHTML = button.childNodes[0].nodeValue;
-  console.log(button.childNodes[0].nodeValue);
-  loadXML();
-}
-
-function loadXML(){
-  const oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-
-  function reportStatus() {
-    if (oXHR.readyState == 4)       //  request completed.
-        loadAnimalValues(this.responseXML);      // Now show the data.
+  if(button.childNodes[0] != undefined){
+    let animalOfField = button.childNodes[0].nodeValue;
+    document.getElementById("pop-up-title").innerHTML = animalOfField;
+    loadAnimalValues(animalOfField);
   }
-
-  oXHR.onreadystatechange = reportStatus;
-  oXHR.open("GET", "data.xml", true);      
-  oXHR.send();
 }
 
-function loadAnimalValues(){
-  
+function loadAnimalValues(animal){
+  xml = loadXMLDoc("data.xml");
+  let animals = xml.getElementsByTagName("animal");
+  let table = document.createElement("table");
+  let tbody = document.createElement("tbody");
+  for (let i = 0; i < animals.length; i++) {
+    if(animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == animal){
+      if(animals[i].getElementsByTagName("rasse")[0].childNodes[0] != undefined){
+        let value = animals[i].getElementsByTagName("rasse")[0].childNodes[0].nodeValue;
+        let tr = document.createElement("tr");
+        let tdB = document.createElement("td");
+        let tdW = document.createElement("td");
+        tdB.textContent = "Rasse:";
+        tdW.textContent = value;
+        tr.appendChild(tdB);
+        tr.appendChild(tdW);
+        tbody.appendChild(tr);
+      }
+      if(animals[i].getElementsByTagName("farbe")[0].childNodes[0] != undefined){
+        let value = animals[i].getElementsByTagName("farbe")[0].childNodes[0].nodeValue;
+        let tr = document.createElement("tr");
+        let tdB = document.createElement("td");
+        let tdW = document.createElement("td");
+        tdB.textContent = "Farbe:";
+        tdW.textContent = value;
+        tr.appendChild(tdB);
+        tr.appendChild(tdW);
+        tbody.appendChild(tr);
+      }
+      if(animals[i].getElementsByTagName("quelle_zucht")[0].childNodes[0] != undefined){
+        let value = animals[i].getElementsByTagName("quelle_zucht")[0].childNodes[0].nodeValue;
+        let tr = document.createElement("tr");
+        let tdB = document.createElement("td");
+        let tdW = document.createElement("td");
+        tdB.textContent = "Quelle Zucht:";
+        tdW.textContent = value;
+        tr.appendChild(tdB);
+        tr.appendChild(tdW);
+        tbody.appendChild(tr);
+      }
+      if(animals[i].getElementsByTagName("parent1")[0].childNodes[0] != undefined){
+        let value = animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue;
+        let tr = document.createElement("tr");
+        let tdB = document.createElement("td");
+        let tdW = document.createElement("td");
+        tdB.textContent = "Elternteil 1:";
+        tdW.textContent = value;
+        tr.appendChild(tdB);
+        tr.appendChild(tdW);
+        tbody.appendChild(tr);
+      }
+      if(animals[i].getElementsByTagName("parent2")[0].childNodes[0] != undefined){
+        let value = animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue;
+        let tr = document.createElement("tr");
+        let tdB = document.createElement("td");
+        let tdW = document.createElement("td");
+        tdB.textContent = "Elternteil 2:";
+        tdW.textContent = value;
+        tr.appendChild(tdB);
+        tr.appendChild(tdW);
+        tbody.appendChild(tr);
+      }
+      if(animals[i].getElementsByTagName("jungtiere")[0].childNodes[0] != undefined){
+        let value = animals[i].getElementsByTagName("jungtiere")[0].childNodes[0].nodeValue;
+        let tr = document.createElement("tr");
+        let tdB = document.createElement("td");
+        let tdW = document.createElement("td");
+        tdB.textContent = "Jungtiere:";
+        tdW.textContent = value;
+        tr.appendChild(tdB);
+        tr.appendChild(tdW);
+        tbody.appendChild(tr);
+      }
+
+      table.appendChild(tbody);
+      let div = document.getElementById("container");
+      div.innerHTML = "";
+      div.appendChild(table);
+
+      if(animals[i].getElementsByTagName("kurzbeschreibung")[0].childNodes[0] != undefined){
+        let value = animals[i].getElementsByTagName("kurzbeschreibung")[0].childNodes[0].nodeValue;
+        let p = document.createElement("p");
+        p.textContent = "Kurzbeschreibung: " + value;
+        div.appendChild(p);
+      }
+      return;
+    }
+  }
+}
+
+function loadXMLDoc(filename)
+{
+if (window.ActiveXObject)
+  {
+  xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  }
+else
+  {
+  xhttp = new XMLHttpRequest();
+  }
+xhttp.open("GET", filename, false);
+try {xhttp.responseType = "msxml-document"} catch(err) {}
+xhttp.send("");
+return xhttp.responseXML;
+}
+
+function closePopUp(){
+  document.getElementById("overlay").classList.remove("active");
 }
