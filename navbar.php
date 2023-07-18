@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="navbar.css">
         <link rel="stylesheet" type="text/css" href="animalPopup.css">
+        <script type="text/javascript" src="searchanimals.js"></script>
     </head>
-    <body>
+    <body onload="loadList()">
 <!-- header ------------------------------------->
         <header>
             <nav>
@@ -34,9 +35,15 @@
                             <label>Quellenzucht</label> 
                             <input placeholder="Quellenzucht" type="text" name="quelle_zucht">
                             <label>Vatertier</label>
-                            <input placeholder="Name des Vaters" type="text" name="vatertier">
+                            <input placeholder="Tier auswählen (bei Bedarf leer lassen)" type="text" name="vatertier" list="animals-list" id="animalsearchinput1">
+                            <datalist id="animals-list">
+                                <option value="keine Einträge">
+                            </datalist>
                             <label>Muttertier</label>
-                            <input placeholder="Name der Mutter" type="text" name="muttertier">
+                            <input placeholder="Tier auswählen (bei Bedarf leer lassen)" type="text" name="muttertier" list="animals-list" id="animalsearchinput1">
+                            <datalist id="animals-list">
+                                <option value="keine Einträge">
+                            </datalist>
                             <label>Jungtiere</label>
                             <input placeholder="Jungtiere" type="text" name="jungtiere">
                             <label>Kurzbeschreibung</label>
