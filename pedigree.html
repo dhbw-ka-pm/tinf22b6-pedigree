@@ -15,7 +15,7 @@
 <!-- body --------------------------------------->
         <div id="tree-box"> 
             <div class="pet-outer-box" id="left-pet-outer-box">
-                <div class="pet-box" id="pet-box1" > <button class="buttonInfo" onclick = "popup()"></button> </div>
+                <div class="pet-box" id="pet-box1" > <button class="buttonInfo" onclick = "popup(this)"></button> </div>
             </div> 
             <div class="svg-outer-box">  
                 <svg class="svg1" onload="loadsvg()">
@@ -26,8 +26,8 @@
                 </svg>
             </div>
             <div class="pet-outer-box">
-                <div class="pet-box" id="pet-box2-1" ><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box2-2"><button class="buttonInfo" onclick = "popup()"></button></div>
+                <div class="pet-box" id="pet-box2-1" ><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box2-2"><button class="buttonInfo" onclick = "popup(this)"></button></div>
             </div>
             <div class="svg-outer-box">
                 <svg class="svg2" onresize="loadsvg()">
@@ -44,10 +44,10 @@
                 </svg>
             </div>
             <div class="pet-outer-box">
-                <div class="pet-box" id="pet-box3-1"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box3-2"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box3-3"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box3-4"><button class="buttonInfo" onclick = "popup()"></button></div>
+                <div class="pet-box" id="pet-box3-1"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box3-2"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box3-3"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box3-4"><button class="buttonInfo" onclick = "popup(this)"></button></div>
             </div>
             <div class="svg-outer-box">
                 <svg class="svg3">
@@ -76,20 +76,20 @@
                 </svg>
             </div>
             <div class="pet-outer-box" id="right-pet-outer-box">
-                <div class="pet-box" id="pet-box4-1"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box4-2"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box4-3"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box4-4"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box4-5"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box4-6"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box4-7"><button class="buttonInfo" onclick = "popup()"></button></div>
-                <div class="pet-box" id="pet-box4-8"><button class="buttonInfo" onclick = "popup()"></button></div>
+                <div class="pet-box" id="pet-box4-1"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box4-2"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box4-3"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box4-4"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box4-5"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box4-6"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box4-7"><button class="buttonInfo" onclick = "popup(this)"></button></div>
+                <div class="pet-box" id="pet-box4-8"><button class="buttonInfo" onclick = "popup(this)"></button></div>
             </div>
         </div>
         
         <div class="overlay" id="overlay">
             <div class="wrapper">
-                <h2>&Uumlbersicht</h2><a class="close" href="pedigree.html">&times;</a> 
+                <h2 id="pop-up-title">&Uumlbersicht</h2><a class="close" href="pedigree.html">&times;</a> 
                 <div class="content">
                     <div class="container">
                        
@@ -97,10 +97,5 @@
                 </div>
             </div>
         </div>   
-        <script>
-            function popup(){
-                document.getElementById("overlay").classList.toggle("active")
-            }
-        </script>
     </body>
 </html>

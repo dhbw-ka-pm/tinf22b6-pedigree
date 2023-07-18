@@ -1,17 +1,17 @@
+// SVGs ---------------------------------------------------------------------------
 function loadsvg(){
-    let list = document.getElementsByTagName("svg");
-    for (let l of list){
-        let childs = l.children;
-        let vMiddle = l.clientHeight / 2;
-        let hMiddle = l.clientWidth / 2;
-            setLineAttributes(childs[0], 0, hMiddle, vMiddle, vMiddle);
-            setLineAttributes(childs[1],hMiddle,hMiddle,vMiddle*0.5,vMiddle*1.5);
-            setLineAttributes(childs[2], hMiddle, l.clientWidth, vMiddle*0.5, vMiddle*0.5);
-            setLineAttributes(childs[3], hMiddle, l.clientWidth, vMiddle*1.5, vMiddle*1.5);
-        
-    }
+  let list = document.getElementsByTagName("svg");
+  for (let l of list){
+      let childs = l.children;
+      let vMiddle = l.clientHeight / 2;
+      let hMiddle = l.clientWidth / 2;
+          setLineAttributes(childs[0], 0, hMiddle, vMiddle, vMiddle);
+          setLineAttributes(childs[1],hMiddle,hMiddle,vMiddle*0.5,vMiddle*1.5);
+          setLineAttributes(childs[2], hMiddle, l.clientWidth, vMiddle*0.5, vMiddle*0.5);
+          setLineAttributes(childs[3], hMiddle, l.clientWidth, vMiddle*1.5, vMiddle*1.5);
+      
+  }
 }
-
 
 function setLineAttributes(element, x1, x2, y1, y2){
     element.setAttribute("x1", x1);
@@ -20,40 +20,27 @@ function setLineAttributes(element, x1, x2, y1, y2){
     element.setAttribute("y2", y2);
 }
 
-
-function loadXMLDoc(filename)
-{
-if (window.ActiveXObject)
-  {
-  xhttp = new ActiveXObject("Msxml2.XMLHTTP");
-  }
-else
-  {
-  xhttp = new XMLHttpRequest();
-  }
-xhttp.open("GET", filename, false);
-try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
-xhttp.send("");
-return xhttp.responseXML;
+// Info-Pop-Up ----------------------------------------------------------------
+function popup(button){
+  document.getElementById("overlay").classList.toggle("active");
+  document.getElementById("pop-up-title").innerHTML = button.childNodes[0].nodeValue;
+  console.log(button.childNodes[0].nodeValue);
+  loadXML();
 }
 
-function displayResult()
-{
-  console.log("load xml");
-xml = loadXMLDoc("data.xml");
-xsl = loadXMLDoc("transform.xsl");
-// code for IE
-if (window.ActiveXObject || xhttp.responseType == "msxml-document")
-  {
-  ex = xml.transformNode(xsl);
-  document.getElementById("pet-box1").innerHTML = ex;
+function loadXML(){
+  const oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+
+  function reportStatus() {
+    if (oXHR.readyState == 4)       //  request completed.
+        loadAnimalValues(this.responseXML);      // Now show the data.
   }
-// code for Chrome, Firefox, Opera, etc.
-else if (document.implementation && document.implementation.createDocument)
-  {
-  xsltProcessor = new XSLTProcessor();
-  xsltProcessor.importStylesheet(xsl);
-  resultDocument = xsltProcessor.transformToFragment(xml, document);
-  document.getElementById("pet-box1").appendChild(resultDocument);
-  }
+
+  oXHR.onreadystatechange = reportStatus;
+  oXHR.open("GET", "data.xml", true);      
+  oXHR.send();
+}
+
+function loadAnimalValues(){
+  
 }
