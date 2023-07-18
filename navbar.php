@@ -36,6 +36,8 @@
                             <input placeholder="Name des Vaters" type="text" name="vatertier">
                             <label>Muttertier</label>
                             <input placeholder="Name der Mutter" type="text" name="muttertier">
+                            <label>Jungtiere</label>
+                            <input placeholder="Jungtiere" type="text" name="jungtiere">
                             <label>Kurzbeschreibung</label>
                             <input placeholder="Beschreibung" type="text" name="kurzbeschreibung">
                             <input type="submit" value="Absenden">
@@ -52,18 +54,20 @@
             $quelle_zucht = $_POST["quelle_zucht"];
             $vatertier = $_POST["vatertier"];
             $muttertier = $_POST["muttertier"];
+            $jungtiere=$_POST["jungtiere"];
             $kurzbeschreibung = $_POST["kurzbeschreibung"];
-n
-            $filename = 'data.xml';
 
-            function addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $kurzbeschreibung, $xmlData, $filename, $addStylesheet = false) {
+            $filename = 'datas.xml';
+
+            function addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier,$jungtiere, $kurzbeschreibung, $xmlData, $filename, $addStylesheet = false) {
                 $newAnimal = $xmlData->addChild('animal');
                 $newAnimal->addChild('name', $name);
                 $newAnimal->addChild('rasse', $rasse);
                 $newAnimal->addChild('farbe', $farbe);
                 $newAnimal->addChild('quelle_zucht', $quelle_zucht);
-                $newAnimal->addChild('vatertier', $vatertier);
-                $newAnimal->addChild('muttertier', $muttertier);
+                $newAnimal->addChild('parent1', $vatertier);
+                $newAnimal->addChild('parent2', $muttertier);
+                $newAnimal->addChild('jungtiere', $jungtiere);
                 $newAnimal->addChild('kurzbeschreibung', $kurzbeschreibung);
             
                 $dom = new DOMDocument();
@@ -78,15 +82,19 @@ n
                 }
                 $dom->save($filename);
             }
-            
 
-            if (!file_exists($filename)) {
-                $xmlData = new SimpleXMLElement('<animals></animals>');
-                addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $kurzbeschreibung, $xmlData, $filename, true);
+        if (!file_exists($filename)) {
+            $xmlData = new SimpleXMLElement('<animals></animals>');
+            addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $jungtiere, $kurzbeschreibung, $xmlData, $filename, true);
+        } else {
+            $xmlData = simplexml_load_file($filename);
+            if ($xmlData !== false) {
+                addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $jungtiere, $kurzbeschreibung, $xmlData, $filename, false);
             } else {
-                $xmlData = simplexml_load_file($filename);
-                addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $kurzbeschreibung, $xmlData, $filename, false);
+                echo "Failed to load the XML file: $filename";
             }
+        }
+
             
             }
 
