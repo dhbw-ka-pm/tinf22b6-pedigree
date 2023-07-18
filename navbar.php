@@ -89,7 +89,7 @@
             addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $jungtiere, $kurzbeschreibung, $xmlData, $filename, true);
         } else {
             $xmlData = simplexml_load_file($filename);
-            addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $jungtiere, $kurzbeschreibung, $xmlData, $filename, true);
+            addanimal($name, $rasse, $farbe, $quelle_zucht, $vatertier, $muttertier, $jungtiere, $kurzbeschreibung, $xmlData, $filename, false);
         }
     }
 
