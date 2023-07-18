@@ -39,7 +39,7 @@
     <parent1>Handtaschenratte</parent1>
     <parent2>Bärchen</parent2>
     <jungtiere></jungtiere>
-    <kurzbeschreibung>Ein sehr schönes Tier</kurzbeschreibung>
+    <kurzbeschreibung>Ein seh schönes Tier</kurzbeschreibung>
   </animal>
   <animal>
     <name>Bella</name>
@@ -160,25 +160,5 @@
     <parent2></parent2>
     <jungtiere></jungtiere>
     <kurzbeschreibung>Relativ klein und sehr unterwürfig</kurzbeschreibung>
-  </animal>
-  <animal>
-    <name>d</name>
-    <rasse>d</rasse>
-    <farbe>d</farbe>
-    <quelle_zucht>d</quelle_zucht>
-    <parent1>d</parent1>
-    <parent2>d</parent2>
-    <jungtiere>d</jungtiere>
-    <kurzbeschreibung>d</kurzbeschreibung>
-  </animal>
-  <animal>
-    <name>d</name>
-    <rasse>d</rasse>
-    <farbe>d</farbe>
-    <quelle_zucht>d</quelle_zucht>
-    <parent1>d</parent1>
-    <parent2>d</parent2>
-    <jungtiere>d</jungtiere>
-    <kurzbeschreibung>d</kurzbeschreibung>
   </animal>
 </animals>
