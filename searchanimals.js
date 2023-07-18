@@ -125,6 +125,7 @@ function testOneAnimal(testedAnimal, searchedAnimal){
   let parent2;
   let grandparents = [];
   let animals = xml.getElementsByTagName("animal");
+  console.log(xml);
   //ließt die Eltern
   for (let i = 0; i < animals.length; i++) {
     if(animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == testedAnimal){
