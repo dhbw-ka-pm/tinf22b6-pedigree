@@ -12,11 +12,13 @@
     
     <div class="pet-outer-box" id="left-pet-outer-box">
                 <div class="pet-box" id="pet-box1"> 
-                    <xsl:for-each select="animals/animal">
-                        <xsl:if test="name = $searchstring">
-                            <xsl:value-of select="name"></xsl:value-of>
-                        </xsl:if>
-                    </xsl:for-each>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:for-each select="animals/animal">
+                            <xsl:if test="name = $searchstring">
+                                <xsl:value-of select="name"></xsl:value-of>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </button>
                 </div>
             </div>
             <div class="svg-outer-box">
@@ -29,10 +31,14 @@
             </div>
             <div class="pet-outer-box">
                 <div class="pet-box" id="pet-box2-1">
-                    <xsl:value-of select="animals/animal[name = $parent11]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:value-of select="animals/animal[name = $parent11]/name"/>
+                    </button>
                 </div>
-                <div class="pet-box" id="pet-box2-2">  
-                    <xsl:value-of select="animals/animal[name = $parent12]/name"/>
+                <div class="pet-box" id="pet-box2-2"> 
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:value-of select="animals/animal[name = $parent12]/name"/>
+                    </button>
                 </div>
             </div>
             <div class="svg-outer-box">
@@ -51,16 +57,24 @@
             </div>
             <div class="pet-outer-box">
                 <div class="pet-box" id="pet-box3-1">
-                    <xsl:value-of select="animals/animal[name = $parent21]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:value-of select="animals/animal[name = $parent21]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box3-2">
-                    <xsl:value-of select="animals/animal[name = $parent22]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:value-of select="animals/animal[name = $parent22]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box3-3">
-                    <xsl:value-of select="animals/animal[name = $parent23]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:value-of select="animals/animal[name = $parent23]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box3-4">
-                    <xsl:value-of select="animals/animal[name = $parent24]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:value-of select="animals/animal[name = $parent24]/name"/>
+                    </button>
                 </div>
             </div>
             <div class="svg-outer-box">
@@ -91,36 +105,52 @@
             </div>
             <div class="pet-outer-box" id="right-pet-outer-box">
                 <div class="pet-box" id="pet-box4-1">
-                    <xsl:variable name="parent31" select="animals/animal[name=$parent21]/parent1"/>  
-                    <xsl:value-of select="animals/animal[name = $parent31]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:variable name="parent31" select="animals/animal[name=$parent21]/parent1"/>  
+                        <xsl:value-of select="animals/animal[name = $parent31]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box4-2">
-                    <xsl:variable name="parent32" select="animals/animal[name=$parent21]/parent2"/>  
-                    <xsl:value-of select="animals/animal[name = $parent32]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:variable name="parent32" select="animals/animal[name=$parent21]/parent2"/>  
+                        <xsl:value-of select="animals/animal[name = $parent32]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box4-3">
-                    <xsl:variable name="parent33" select="animals/animal[name=$parent22]/parent1"/>  
-                    <xsl:value-of select="animals/animal[name = $parent33]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:variable name="parent33" select="animals/animal[name=$parent22]/parent1"/>  
+                        <xsl:value-of select="animals/animal[name = $parent33]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box4-4">
-                    <xsl:variable name="parent34" select="animals/animal[name=$parent22]/parent2"/>  
-                    <xsl:value-of select="animals/animal[name = $parent34]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:variable name="parent34" select="animals/animal[name=$parent22]/parent2"/>  
+                        <xsl:value-of select="animals/animal[name = $parent34]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box4-5">
-                    <xsl:variable name="parent35" select="animals/animal[name=$parent23]/parent1"/>  
-                    <xsl:value-of select="animals/animal[name = $parent35]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:variable name="parent35" select="animals/animal[name=$parent23]/parent1"/>  
+                        <xsl:value-of select="animals/animal[name = $parent35]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box4-6">
-                    <xsl:variable name="parent36" select="animals/animal[name=$parent23]/parent2"/>  
-                    <xsl:value-of select="animals/animal[name = $parent36]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:variable name="parent36" select="animals/animal[name=$parent23]/parent2"/>  
+                        <xsl:value-of select="animals/animal[name = $parent36]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box4-7">
-                    <xsl:variable name="parent37" select="animals/animal[name=$parent24]/parent1"/>  
-                    <xsl:value-of select="animals/animal[name = $parent37]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:variable name="parent37" select="animals/animal[name=$parent24]/parent1"/>  
+                        <xsl:value-of select="animals/animal[name = $parent37]/name"/>
+                    </button>
                 </div>
                 <div class="pet-box" id="pet-box4-8">
-                    <xsl:variable name="parent38" select="animals/animal[name=$parent24]/parent2"/>  
-                    <xsl:value-of select="animals/animal[name = $parent38]/name"/>
+                    <button class="buttonInfo" onclick = "popup(this)">
+                        <xsl:variable name="parent38" select="animals/animal[name=$parent24]/parent2"/>  
+                        <xsl:value-of select="animals/animal[name = $parent38]/name"/>
+                    </button>
                 </div>
             </div>
     
