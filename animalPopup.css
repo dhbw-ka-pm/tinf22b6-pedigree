@@ -21,10 +21,10 @@
 	visibility: hidden;
 	opacity: 0;
 }
-/*.overlay:target {
+.overlay:target {
 	visibility: visible;
 	opacity: 1;
-}*/
+}
 
 .overlay.active{
 	visibility: visible;
@@ -46,10 +46,10 @@
 	color: #333;
 }
 .wrapper .close {
-	/*margin: 0;
+	margin: 0;
 	padding: 0;
 	border: none;
-	background-color: transparent;*/
+	background-color: transparent;
 	position: absolute;
 	top: 20px;
 	right: 30px;
