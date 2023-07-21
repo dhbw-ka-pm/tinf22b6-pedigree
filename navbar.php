@@ -22,7 +22,7 @@
         <!-- animal Popup -------------------------------->
         <div class="overlay" id="new-animal-popup">
             <div class="wrapper">
-                <h2>Bitte Formular ausfüllen</h2><a class="close" href="pedigree.html">&times;</a> 
+                <h2>Bitte Formular ausfüllen</h2><a class="close" href="pedigree.php">&times;</a> 
                 <div class="content">
                     <div class="container">
                         <form method="POST">

@@ -161,4 +161,14 @@
     <jungtiere/>
     <kurzbeschreibung>Relativ klein und sehr unterw&#xFC;rfig</kurzbeschreibung>
   </animal>
+  <animal>
+    <name>Hugo</name>
+    <rasse>Englische Bulldoge</rasse>
+    <farbe>Wei&#xDF;/Schwarz gefleckt</farbe>
+    <quelle_zucht/>
+    <parent1>B&#xE4;rchen</parent1>
+    <parent2>Fang</parent2>
+    <jungtiere/>
+    <kurzbeschreibung>Einfach eine super geile Dogge</kurzbeschreibung>
+  </animal>
 </animals>
