@@ -6,8 +6,7 @@ header("Expires: 0");
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="UTF-8" http-equiv="refresh" content="100">
-    
+        <meta charset="UTF-8">
         <title>Pedigree - Stammbaum</title>
         <link rel="stylesheet" type = "text/css" href="pedigree.css">
         <script type="text/javascript" src="loadsvgs.js"></script>
