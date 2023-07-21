@@ -161,24 +161,4 @@
     <jungtiere/>
     <kurzbeschreibung>Relativ klein und sehr unterw&#xFC;rfig</kurzbeschreibung>
   </animal>
-  <animal>
-    <name>d</name>
-    <rasse/>
-    <farbe/>
-    <quelle_zucht/>
-    <parent1/>
-    <parent2/>
-    <jungtiere/>
-    <kurzbeschreibung/>
-  </animal>
-  <animal>
-    <name>f</name>
-    <rasse/>
-    <farbe/>
-    <quelle_zucht/>
-    <parent1/>
-    <parent2/>
-    <jungtiere/>
-    <kurzbeschreibung/>
-  </animal>
 </animals>
