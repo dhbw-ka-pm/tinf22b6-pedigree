@@ -1,7 +1,13 @@
+<?php
+header("Content-Type: text/html; charset=utf-8");
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Expires: 0");
+?>
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" http-equiv="refresh" content="100">
+    
         <title>Pedigree - Stammbaum</title>
         <link rel="stylesheet" type = "text/css" href="pedigree.css">
         <script type="text/javascript" src="loadsvgs.js"></script>
@@ -96,6 +102,6 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
     </body>
 </html>
