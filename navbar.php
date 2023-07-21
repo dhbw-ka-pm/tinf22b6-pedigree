@@ -20,7 +20,7 @@
             </nav>
         </header>
         <!-- animal Popup -------------------------------->
-        <div class="overlay" id="new-animal-popup">
+        <div style="overflow:auto;" class="overlay" id="new-animal-popup">
             <div class="wrapper">
                 <h2>Bitte Formular ausfüllen</h2><a class="close" href="pedigree.html">&times;</a> 
                 <div class="content">
