@@ -20,6 +20,7 @@
 	/*transition: opacity 00ms;*/
 	visibility: hidden;
 	opacity: 0;
+	overflow:auto;
 }
 .overlay:target {
 	visibility: visible;
