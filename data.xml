@@ -164,14 +164,4 @@
     <jungtiere/>
     <kurzbeschreibung>Relativ klein und sehr unterw&#xFC;rfig</kurzbeschreibung>
   </animal>
-  <animal>
-    <name>Blabla</name>
-    <rasse>asdf</rasse>
-    <farbe>asdf</farbe>
-    <quelle_zucht>asdf</quelle_zucht>
-    <parent1>Hundi</parent1>
-    <parent2>Leider tot</parent2>
-    <jungtiere/>
-    <kurzbeschreibung>asdf</kurzbeschreibung>
-  </animal>
 </animals>
