@@ -1,0 +1,18 @@
+<!ELEMENT animals (head, animal+)>
+<!ELEMENT head (meta)>
+
+<!ELEMENT animal (name, rasse, farbe, quelle_zucht, parent1, parent2, jungtiere, kurzbeschreibung)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT rasse (#PCDATA)>
+<!ELEMENT farbe (#PCDATA)>
+<!ELEMENT quelle_zucht (#PCDATA)>
+<!ELEMENT parent1 (#PCDATA)>
+<!ELEMENT parent2 (#PCDATA)>
+<!ELEMENT jungtiere (#PCDATA)>
+<!ELEMENT kurzbeschreibung (#PCDATA)>
+
+<!ELEMENT meta EMPTY>
+<!ATTLIST meta
+http-equiv CDATA #REQUIRED
+content CDATA #REQUIRED
+>
