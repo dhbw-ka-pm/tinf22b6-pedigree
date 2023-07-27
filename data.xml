@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
+<!DOCTYPE animals SYSTEM "data.dtd">
 <?xml-stylesheet type="text/xsl" href="transform.xslt"?>
 <animals>
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, max-age=0, must-revalidate"/>
+  </head>
   <animal>
     <name>Wuffi</name>
     <rasse>Golden Retriever</rasse>

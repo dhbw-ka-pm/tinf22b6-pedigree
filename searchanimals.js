@@ -111,7 +111,7 @@ function testAnimals(){
   let animal1 = document.getElementById("animalsearchinput1").value;
   let animal2 = document.getElementById("animalsearchinput2").value;
   let result = testOneAnimal(animal1, animal2);
-  console.log("result" + result);
+  //console.log("result" + result);
   if(result == undefined){
     result = testOneAnimal(animal2, animal1);
   }
@@ -126,7 +126,7 @@ function testOneAnimal(testedAnimal, searchedAnimal){
   let parent2;
   let grandparents = [];
   let animals = xml.getElementsByTagName("animal");
-  console.log(xml);
+  //console.log(xml);
   //ließt die Eltern
   for (let i = 0; i < animals.length; i++) {
     if(animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == testedAnimal){
@@ -160,7 +160,7 @@ function testOneAnimal(testedAnimal, searchedAnimal){
   for (let i = 0; i < animals.length; i++) {
     if((animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == parent1) || (animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == parent2)){
       if(animals[i].getElementsByTagName("parent1")[0].childNodes[0]!=undefined){
-        console.log(animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue);
+        //console.log(animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue);
         grandparents.push(animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue); 
       }
       if(animals[i].getElementsByTagName("parent2")[0].childNodes[0]!=undefined){
@@ -176,17 +176,24 @@ function testOneAnimal(testedAnimal, searchedAnimal){
       return testedAnimal + " ist ein Enkel von " + searchedAnimal;
     }
   }
-  console.log("kein Großelternteil");
+  //console.log("kein Großelternteil");
   //Testet auf Onkel/Tante
   for (let i = 0; i < animals.length; i++) {
     if(animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == searchedAnimal){
-      console.log("N: " + animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+      //console.log("N: " + animals[i].getElementsByTagName("name")[0].childNodes[0].nodeValue);
       for (let j = 0; j < grandparents.length; j++) {
         //console.log("GP:" + grandparents[i]);
         //console.log("P1: " + animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue);
         //console.log("P2: " + animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue);
-        if((grandparents[j] == animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue) || (grandparents[j] == animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue)){
-          return searchedAnimal + " ist ein/e Onkel/Tante von " + testedAnimal;
+        if(animals[i].getElementsByTagName("parent1")[0].childNodes[0]!=undefined){
+          if(grandparents[j] == animals[i].getElementsByTagName("parent1")[0].childNodes[0].nodeValue){
+            return searchedAnimal + " ist ein/e Onkel/Tante von " + testedAnimal;
+          }
+        }
+        if(animals[i].getElementsByTagName("parent2")[0].childNodes[0]!=undefined){
+          if(grandparents[j] == animals[i].getElementsByTagName("parent2")[0].childNodes[0].nodeValue){
+            return searchedAnimal + " ist ein/e Onkel/Tante von " + testedAnimal;
+          }
         }
       }
     }
