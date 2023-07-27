@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="transform.xslt"?>
 <animals>
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, max-age=0, must-revalidate"/>
+  </head>
   <animal>
     <name>Wuffi</name>
     <rasse>Golden Retriever</rasse>
@@ -8,67 +11,67 @@
     <quelle_zucht>1</quelle_zucht>
     <parent1>Bello</parent1>
     <parent2>Wauwau</parent2>
-    <jungtiere></jungtiere>
+    <jungtiere/>
     <kurzbeschreibung>Ein sehr ruhiges Tier</kurzbeschreibung>
   </animal>
   <animal>
     <name>Bello</name>
-    <rasse>belgischer Schäferhund</rasse>
+    <rasse>belgischer Sch&#xE4;ferhund</rasse>
     <farbe>Braun</farbe>
     <quelle_zucht>1</quelle_zucht>
     <parent1>Hundi</parent1>
     <parent2>Bella</parent2>
-    <jungtiere></jungtiere>
+    <jungtiere/>
     <kurzbeschreibung>Ein starkes Tier</kurzbeschreibung>
   </animal>
   <animal>
     <name>Wauwau</name>
     <rasse>Chiwawa</rasse>
-    <farbe>Weiß</farbe>
+    <farbe>Wei&#xDF;</farbe>
     <quelle_zucht>1</quelle_zucht>
     <parent1>Fang</parent1>
     <parent2>Rex</parent2>
-    <jungtiere></jungtiere>
+    <jungtiere/>
     <kurzbeschreibung>Sehr klein</kurzbeschreibung>
   </animal>
   <animal>
     <name>Hundi</name>
     <rasse>Dalmatiner</rasse>
-    <farbe>Weiß mit schwarzen Punkten</farbe>
+    <farbe>Wei&#xDF; mit schwarzen Punkten</farbe>
     <quelle_zucht>1</quelle_zucht>
     <parent1>Handtaschenratte</parent1>
-    <parent2>Bärchen</parent2>
-    <jungtiere></jungtiere>
-    <kurzbeschreibung>Ein sehr schönes Tier</kurzbeschreibung>
+    <parent2>B&#xE4;rchen</parent2>
+    <jungtiere/>
+    <kurzbeschreibung>Ein sehr sch&#xF6;nes Tier</kurzbeschreibung>
   </animal>
   <animal>
     <name>Bella</name>
     <rasse>Pudel</rasse>
-    <farbe>Weiß</farbe>
+    <farbe>Wei&#xDF;</farbe>
     <quelle_zucht>1</quelle_zucht>
     <parent1>sanfter Riese</parent1>
     <parent2>Leider tot</parent2>
-    <jungtiere></jungtiere>
-    <kurzbeschreibung>Legt Wert auf ihr Äußeres</kurzbeschreibung>
+    <jungtiere/>
+    <kurzbeschreibung>Legt Wert auf ihr &#xC4;u&#xDF;eres</kurzbeschreibung>
   </animal>
-    <animal>
+  <animal>
     <name>Bella2</name>
     <rasse>Pudel</rasse>
-    <farbe>Weiß</farbe>
+    <farbe>Wei&#xDF;</farbe>
     <quelle_zucht>0</quelle_zucht>
     <parent1>sanfter Riese</parent1>
     <parent2>Leider tot</parent2>
-    <jungtiere></jungtiere>
+    <jungtiere/>
     <kurzbeschreibung>Mag den Friseur nicht</kurzbeschreibung>
   </animal>
   <animal>
     <name>Rex</name>
-    <rasse>deutscher Schäferhund</rasse>
+    <rasse>deutscher Sch&#xE4;ferhund</rasse>
     <farbe>Braun/Schwarz</farbe>
     <quelle_zucht>1</quelle_zucht>
     <parent1>big giant</parent1>
     <parent2>Doggo</parent2>
-    <jungtiere></jungtiere>
+    <jungtiere/>
     <kurzbeschreibung>Sehr schnell</kurzbeschreibung>
   </animal>
   <animal>
@@ -78,27 +81,27 @@
     <quelle_zucht>1</quelle_zucht>
     <parent1>Omega</parent1>
     <parent2>Alpha</parent2>
-    <jungtiere></jungtiere>
-    <kurzbeschreibung>Sehr großes Tier</kurzbeschreibung>
+    <jungtiere/>
+    <kurzbeschreibung>Sehr gro&#xDF;es Tier</kurzbeschreibung>
   </animal>
   <animal>
-    <name>Bärchen</name>
+    <name>B&#xE4;rchen</name>
     <rasse>Mops</rasse>
     <farbe>Braun</farbe>
     <quelle_zucht>1</quelle_zucht>
-    <parent1></parent1>
-    <parent2></parent2>
-    <jungtiere></jungtiere>
+    <parent1/>
+    <parent2/>
+    <jungtiere/>
     <kurzbeschreibung>Recht klein, aber putzig</kurzbeschreibung>
   </animal>
   <animal>
     <name>Handtaschenratte</name>
     <rasse>Chiwawa</rasse>
-    <farbe>Weiß</farbe>
+    <farbe>Wei&#xDF;</farbe>
     <quelle_zucht>1</quelle_zucht>
-    <parent1></parent1>
-    <parent2></parent2>
-    <jungtiere></jungtiere>
+    <parent1/>
+    <parent2/>
+    <jungtiere/>
     <kurzbeschreibung>Nicht sehr beweglich, wird gerne getragen</kurzbeschreibung>
   </animal>
   <animal>
@@ -106,9 +109,9 @@
     <rasse>Unbekannt</rasse>
     <farbe>Unbekannt</farbe>
     <quelle_zucht>2</quelle_zucht>
-    <parent1></parent1>
-    <parent2></parent2>
-    <jungtiere></jungtiere>
+    <parent1/>
+    <parent2/>
+    <jungtiere/>
     <kurzbeschreibung>Leider verstorben, bevor Daten gesammelt werden konnten</kurzbeschreibung>
   </animal>
   <animal>
@@ -116,39 +119,39 @@
     <rasse>irischer Wolfshund</rasse>
     <farbe>Grau</farbe>
     <quelle_zucht>2</quelle_zucht>
-    <parent1></parent1>
-    <parent2></parent2>
-    <jungtiere></jungtiere>
-    <kurzbeschreibung>Sehr groß und gutmütig</kurzbeschreibung>
+    <parent1/>
+    <parent2/>
+    <jungtiere/>
+    <kurzbeschreibung>Sehr gro&#xDF; und gutm&#xFC;tig</kurzbeschreibung>
   </animal>
   <animal>
     <name>Doggo</name>
     <rasse>Rottwewiler</rasse>
     <farbe>Schwarz/Braun</farbe>
     <quelle_zucht>1</quelle_zucht>
-    <parent1></parent1>
-    <parent2></parent2>
-    <jungtiere></jungtiere>
+    <parent1/>
+    <parent2/>
+    <jungtiere/>
     <kurzbeschreibung>Kampfhund</kurzbeschreibung>
   </animal>
   <animal>
     <name>big giant</name>
-    <rasse>Neufundländer</rasse>
+    <rasse>Neufundl&#xE4;nder</rasse>
     <farbe>Grau</farbe>
     <quelle_zucht>1</quelle_zucht>
-    <parent1></parent1>
-    <parent2></parent2>
-    <jungtiere></jungtiere>
-    <kurzbeschreibung>Sehr groß</kurzbeschreibung>
+    <parent1/>
+    <parent2/>
+    <jungtiere/>
+    <kurzbeschreibung>Sehr gro&#xDF;</kurzbeschreibung>
   </animal>
   <animal>
     <name>Alpha</name>
     <rasse>Kangal</rasse>
     <farbe>Hellbraun</farbe>
     <quelle_zucht>1</quelle_zucht>
-    <parent1></parent1>
-    <parent2></parent2>
-    <jungtiere></jungtiere>
+    <parent1/>
+    <parent2/>
+    <jungtiere/>
     <kurzbeschreibung>Sehr dominant</kurzbeschreibung>
   </animal>
   <animal>
@@ -156,9 +159,9 @@
     <rasse>Dackel</rasse>
     <farbe>Braun</farbe>
     <quelle_zucht>1</quelle_zucht>
-    <parent1></parent1>
-    <parent2></parent2>
-    <jungtiere></jungtiere>
-    <kurzbeschreibung>Relativ klein und sehr unterwürfig</kurzbeschreibung>
+    <parent1/>
+    <parent2/>
+    <jungtiere/>
+    <kurzbeschreibung>Relativ klein und sehr unterw&#xFC;rfig</kurzbeschreibung>
   </animal>
 </animals>
