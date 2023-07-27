@@ -1,3 +1,8 @@
+<?php
+header("Content-Type: text/html; charset=utf-8");
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Expires: 0");
+?>
 <!DOCTYPE html>
 <html lang="de">
     <head>
@@ -96,6 +101,6 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
     </body>
 </html>
